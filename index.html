@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raqeem — AI document assistant for UAE accounting firms</title>
+<meta name="description" content="Raqeem collects and checks client documents on WhatsApp for accounting and bookkeeping firms in the UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14211c; --muted:#55645d; --bg:#f7f5ef; --card:#ffffff;
+    --green:#0f6b4f; --green-soft:#e3f0ea; --line:#e4e1d8; --gold:#b8862b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--green)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0}
+  .nav{display:flex;justify-content:space-between;align-items:center}
+  .logo{font-family:Fraunces,serif;font-size:26px;letter-spacing:.3px;color:var(--ink);text-decoration:none}
+  .logo span{color:var(--gold)}
+  .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600}
+  .btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+  .hero{padding:56px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .tag{display:inline-block;background:var(--green-soft);color:var(--green);font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+  h1{font-family:Fraunces,serif;font-size:46px;line-height:1.12;margin-bottom:18px}
+  .lead{font-size:18px;color:var(--muted);margin-bottom:28px;max-width:520px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .phone{background:#e9e4d6;border-radius:28px;padding:18px;box-shadow:0 20px 40px rgba(20,33,28,.08)}
+  .chat{background:#efeae0;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;font-size:14px}
+  .msg{max-width:85%;padding:10px 12px;border-radius:12px}
+  .in{background:#fff;align-self:flex-start}
+  .out{background:#d9f2df;align-self:flex-end}
+  .msg small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-family:Fraunces,serif;font-size:32px;margin-bottom:10px}
+  .sub{color:var(--muted);margin-bottom:32px;max-width:620px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card h3{font-size:17px;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:15px}
+  .num{font-family:Fraunces,serif;color:var(--gold);font-size:28px;margin-bottom:6px}
+  ul.check{list-style:none;display:grid;gap:10px}
+  ul.check li{padding-left:28px;position:relative}
+  ul.check li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+  .contact{background:var(--green);color:#fff;border-radius:20px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .contact h2{color:#fff}
+  .contact p{color:#d6e9e1}
+  .contact .btn{background:#fff;color:var(--green)}
+  footer{padding:32px 0;color:var(--muted);font-size:14px}
+  footer .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  @media (max-width:820px){
+    .hero{grid-template-columns:1fr;padding:32px 0 44px}
+    h1{font-size:34px}
+    .grid3{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">Raqeem<span>.</span></a>
+    <a class="btn ghost" href="mailto:raqeemhq@gmail.com">Contact</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <span class="tag">For accounting &amp; bookkeeping firms in the UAE</span>
+      <h1>Stop chasing clients for documents on WhatsApp.</h1>
+      <p class="lead">Raqeem reminds your clients, collects their bank statements, invoices and receipts on WhatsApp, and checks every file with AI, so your team only handles the real accounting work.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:raqeemhq@gmail.com?subject=Raqeem%20demo">Book a free demo</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+    </div>
+    <div class="phone" aria-label="Example WhatsApp conversation">
+      <div class="chat">
+        <div class="msg out">Hi Ahmed, please send your September bank statement and sales invoices. Thank you!<small>Your firm · 9:00</small></div>
+        <div class="msg in">📷 photo<small>Ahmed · 9:14</small></div>
+        <div class="msg out">Thanks Ahmed! The photo is blurry and the left side is cut off. Please send the PDF from your bank app, or a clear photo of the full page.<small>Your firm · 9:14</small></div>
+        <div class="msg in">📄 statement_sept.pdf<small>Ahmed · 9:20</small></div>
+        <div class="msg out">Got it ✅ September statement received. Still needed: sales invoices.<small>Your firm · 9:20</small></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <p class="sub">Your clients keep messaging the WhatsApp number they already know. Raqeem works quietly in the background.</p>
+    <div class="grid3">
+      <div class="card"><div class="num">1</div><h3>Polite reminders</h3><p>Each month, clients get a friendly WhatsApp message listing the documents your firm needs, with follow-ups if they forget.</p></div>
+      <div class="card"><div class="num">2</div><h3>AI checks every file</h3><p>Raqeem reads each photo or PDF, labels it, and spots problems: blurry, cut off, wrong month, missing pages.</p></div>
+      <div class="card"><div class="num">3</div><h3>One clear list</h3><p>Your team sees who has sent everything, who is still waiting, and which files need attention, all sorted and named.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built for UAE firms</h2>
+    <p class="sub">Made for the way small business clients in the UAE actually work.</p>
+    <ul class="check">
+      <li>Works on WhatsApp: no portal, no app, no login for your clients</li>
+      <li>Replies in English and Arabic, with Hindi and Urdu coming</li>
+      <li>Understands bank statements, invoices, receipts, trade licenses and IDs</li>
+      <li>Your team stays in control: staff confirm the AI's work before anything is filed</li>
+      <li>Raqeem collects and checks documents only. It does not give tax advice</li>
+    </ul>
+  </section>
+
+  <section id="privacy">
+    <h2>Your clients' data, handled with care</h2>
+    <p class="sub">We only process the documents your clients choose to send, only to collect and check them for your firm. We never sell or share data, and files are deleted when your firm asks. Read our <a href="/privacy.html">privacy policy</a>.</p>
+  </section>
+
+  <section>
+    <div class="contact">
+      <div>
+        <h2>See it working in 15 minutes</h2>
+        <p>Book a short video call and we'll show Raqeem checking real document examples.</p>
+      </div>
+      <a class="btn" href="mailto:raqeemhq@gmail.com?subject=Raqeem%20demo">Email us</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div>© 2026 Raqeem, a product of MirHashimEnterprise · Hyderabad, Telangana, India</div>
+    <div><a href="/privacy.html">Privacy policy</a> · <a href="mailto:raqeemhq@gmail.com">raqeemhq@gmail.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
