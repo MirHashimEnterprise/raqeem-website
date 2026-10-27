@@ -198,6 +198,9 @@
 
 
   /* Pilot form */
+  .selfstart{margin-top:28px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .selfstart .btn{font-size:17px;padding:15px 30px}
+  .selfstart a:not(.btn){color:var(--green)}
   .pform{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 30px 60px -44px rgba(15,42,34,.45)}
   .pform-head h3{font-size:24px;letter-spacing:-.01em;margin-bottom:4px}
   .pform-head p{color:var(--muted);margin-bottom:22px}
@@ -375,7 +378,7 @@
         <ul class="facts">
           <li data-i18n="fact1">No app for your clients</li>
           <li data-i18n="fact2">English and Arabic</li>
-          <li data-i18n="fact3">We set it up for you</li>
+          <li data-i18n="fact3">Ready in 5 minutes</li>
         </ul>
       </div>
 
@@ -507,17 +510,21 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="pilot-title" data-i18n="pilot.h">Try it free for a month</h2>
-        <p data-i18n="pilot.p">No payment details, no contract. We set everything up, your clients use it for 30 days, and you decide.</p>
+        <p data-i18n="pilot.p">No payment details, no contract. Set it up yourself in 5 minutes, your clients use it for 30 days, and you decide.</p>
       </div>
       <div class="pilot">
-        <div class="pstep"><div class="n">1</div><h3 data-i18n="ps1.h">A 15-minute call</h3><p data-i18n="ps1.p">We show you Raqeem, learn which documents you need from clients, and answer your questions.</p><span class="time" data-i18n="ps1.t">Day 1</span></div>
-        <div class="pstep"><div class="n">2</div><h3 data-i18n="ps2.h">We set up your number</h3><p data-i18n="ps2.p">A WhatsApp number with your firm's name, your client list and your monthly checklist. You don't touch anything technical.</p><span class="time" data-i18n="ps2.t">Within 2–3 days</span></div>
-        <div class="pstep"><div class="n">3</div><h3 data-i18n="ps3.h">Your clients start sending</h3><p data-i18n="ps3.p">You watch documents arrive, checked and sorted. After 30 days we show you the results, and you choose a plan or walk away.</p><span class="time" data-i18n="ps3.t">30 days free</span></div>
+        <div class="pstep"><div class="n">1</div><h3 data-i18n="ps1.h">Create your account</h3><p data-i18n="ps1.p">Your firm name, your email and a password. It takes one minute.</p><span class="time" data-i18n="ps1.t">Minute 1</span></div>
+        <div class="pstep"><div class="n">2</div><h3 data-i18n="ps2.h">Connect your WhatsApp</h3><p data-i18n="ps2.p">Log in with Facebook and add the number your clients will use. Meta sends it a code to verify it. Nothing technical.</p><span class="time" data-i18n="ps2.t">Minutes 2–5</span></div>
+        <div class="pstep"><div class="n">3</div><h3 data-i18n="ps3.h">Your clients start sending</h3><p data-i18n="ps3.p">Add your client list and watch documents arrive, checked and sorted. After 30 days you choose a plan or walk away.</p><span class="time" data-i18n="ps3.t">30 days free</span></div>
+      </div>
+      <div class="selfstart">
+        <a class="btn" href="https://app.raqeemhq.com/signup" data-i18n="self.btn">Start now, set up in 5 minutes</a>
+        <p class="fine" data-i18n-html="self.p">No call needed. 30 days free. Already have an account? <a href="https://app.raqeemhq.com/login">Log in</a></p>
       </div>
       <form class="pform" id="pilotForm" novalidate>
         <div class="pform-head">
-          <h3 data-i18n="fm.h">Request your free pilot</h3>
-          <p data-i18n="fm.p">Tell us a little about your firm. We'll reply within one working day to book your 15-minute call.</p>
+          <h3 data-i18n="fm.h">Prefer we set it up with you?</h3>
+          <p data-i18n="fm.p">Tell us a little about your firm. We'll reply within one working day to book a 15-minute call.</p>
         </div>
         <div class="grid2">
           <label><span data-i18n="fm.name">Your name</span><input name="name" required autocomplete="name"></label>
@@ -620,7 +627,7 @@
       <div class="founder">
         <div class="mk" aria-hidden="true">H</div>
         <div>
-          <blockquote data-i18n="fo.q">"I built Raqeem because accounting teams lose hours every month chasing clients for documents on WhatsApp. During your pilot you work with me directly: I set up your number, load your client list and fix anything you need."</blockquote>
+          <blockquote data-i18n="fo.q">"I built Raqeem because accounting teams lose hours every month chasing clients for documents on WhatsApp. During your pilot you can reach me directly: I can help connect your number, load your client list and fix anything you need."</blockquote>
           <cite><b>Hashim</b> · <span data-i18n="fo.r">Founder, Raqeem</span></cite>
         </div>
       </div>
@@ -635,7 +642,7 @@
       </div>
       <div class="qs">
         <details><summary data-i18n="q1">Do my clients need to download an app?</summary><p data-i18n="a1">No. They use the WhatsApp they already have. No links, no logins, no passwords. They just reply in the chat.</p></details>
-        <details><summary data-i18n="q2">Which WhatsApp number will my clients message?</summary><p data-i18n="a2">A dedicated business number that shows your firm's name. Your normal WhatsApp stays exactly as it is. We set up the new number for you during the pilot.</p></details>
+        <details><summary data-i18n="q2">Which WhatsApp number will my clients message?</summary><p data-i18n="a2">A dedicated business number that shows your firm's name. Your normal WhatsApp stays exactly as it is. You connect it yourself in a few minutes when you sign up, or we do it with you.</p></details>
         <details><summary data-i18n="q3">Is our clients' data safe?</summary><p data-i18n="a3">Files are used only to collect and check them for your firm, never sold or shared, and deleted when you ask. We can sign a confidentiality agreement before you start.</p></details>
         <details><summary data-i18n="q4">Does Raqeem give tax or accounting advice?</summary><p data-i18n="a4">No. Raqeem collects and checks documents. Questions about tax or bookkeeping are passed to your team, and your accountants stay in control of the work.</p></details>
         <details><summary data-i18n="q5">Which languages does it speak?</summary><p data-i18n="a5">It replies in the language each client writes in, including English, Arabic, Hindi and Urdu.</p></details>
@@ -696,7 +703,7 @@
     'hero.t1': 'عملاؤك يرسلون المستندات.', 'hero.t2': 'ورقيم يتحقق منها.',
     'hero.lead': 'يذكّر رقيم عملاءك عبر واتساب، ويجمع كشوف حساباتهم البنكية وفواتيرهم وإيصالاتهم، ويتحقق من كل ملف باستخدام الذكاء الاصطناعي. يتوقف فريقك عن ملاحقة العملاء ويتفرغ للعمل المحاسبي.',
     'cta.pilot': 'ابدأ تجربتك المجانية', 'cta.watch': 'شاهد العرض في دقيقة', 'cta.prices': 'اطّلع على الأسعار',
-    'fact1': 'لا يحتاج عملاؤك إلى أي تطبيق', 'fact2': 'العربية والإنجليزية', 'fact3': 'نتولى الإعداد بالكامل',
+    'fact1': 'لا يحتاج عملاؤك إلى أي تطبيق', 'fact2': 'العربية والإنجليزية', 'fact3': 'جاهز خلال 5 دقائق',
     'chat.aria': 'مثال لمحادثة واتساب بين مكتب وعميله', 'chat.initial': 'ن', 'chat.firm': 'النور للمحاسبة', 'chat.biz': 'حساب تجاري',
     'chat.m1': 'مرحبًا أحمد، يرجى إرسال كشف حسابك البنكي لشهر سبتمبر وفواتير المبيعات. شكرًا لك!',
     'chat.photo': 'صورة',
@@ -732,11 +739,12 @@
     'calc.l1': 'عدد العملاء الذين يرسلون مستندات شهرية', 'calc.l2': 'دقائق ملاحقة كل عميل شهريًا (رسائل ومكالمات ومتابعات)', 'calc.l4': 'دقائق مراجعة مستندات كل عميل وتسميتها وحفظها', 'calc.l3': 'تكلفة الموظف في الساعة شاملة التأشيرة والمزايا (درهم)',
     'calc.r1': 'من وقت الموظفين تُقضى في جمع المستندات كل شهر', 'calc.r2': 'تكلفة موظفين شهرية قبل أن يبدأ أي عمل محاسبي',
     'calc.note': 'تقدير فقط. تبلغ تكلفة المحاسب المبتدئ في مكتب صغير بالإمارات عادةً نحو 18 إلى 35 درهمًا في الساعة بعد احتساب التأشيرة والتأمين والمزايا. ستظهر أرقامك الحقيقية خلال التجربة المجانية.',
-    'pilot.h': 'جرّبه مجانًا لمدة شهر', 'pilot.p': 'دون بيانات دفع ودون عقد. نتولى الإعداد بالكامل، ويستخدمه عملاؤك لمدة 30 يومًا، ثم تقرر أنت.',
-    'ps1.h': 'مكالمة مدتها 15 دقيقة', 'ps1.p': 'نعرض عليك رقيم، ونتعرّف على المستندات التي تحتاجها من عملائك، ونجيب عن أسئلتك.', 'ps1.t': 'اليوم الأول',
-    'ps2.h': 'نُعدّ رقمك', 'ps2.p': 'رقم واتساب يحمل اسم مكتبك، مع قائمة عملائك وقائمة المستندات الشهرية. لن تحتاج إلى أي عمل تقني.', 'ps2.t': 'خلال 2 إلى 3 أيام',
-    'ps3.h': 'يبدأ عملاؤك بالإرسال', 'ps3.p': 'تتابع وصول المستندات وقد تم التحقق منها وترتيبها. وبعد 30 يومًا نعرض عليك النتائج، فتختار خطة أو تتوقف.', 'ps3.t': '30 يومًا مجانًا',
-    'fm.h': 'اطلب تجربتك المجانية', 'fm.p': 'أخبرنا قليلًا عن مكتبك، وسنرد خلال يوم عمل واحد لتحديد موعد مكالمتك ذات الخمس عشرة دقيقة.',
+    'pilot.h': 'جرّبه مجانًا لمدة شهر', 'pilot.p': 'دون بيانات دفع ودون عقد. جهّزه بنفسك في 5 دقائق، ويستخدمه عملاؤك لمدة 30 يومًا، ثم تقرر أنت.',
+    'ps1.h': 'أنشئ حسابك', 'ps1.p': 'اسم مكتبك وبريدك الإلكتروني وكلمة مرور. يستغرق ذلك دقيقة واحدة.', 'ps1.t': 'الدقيقة 1',
+    'ps2.h': 'اربط رقم واتساب', 'ps2.p': 'سجّل الدخول عبر فيسبوك وأضف الرقم الذي سيستخدمه عملاؤك. ترسل Meta رمزًا للتحقق منه. لا شيء تقني.', 'ps2.t': 'الدقائق 2 إلى 5',
+    'ps3.h': 'يبدأ عملاؤك بالإرسال', 'ps3.p': 'أضف قائمة عملائك وتابع وصول المستندات وقد تم التحقق منها وترتيبها. وبعد 30 يومًا تختار خطة أو تتوقف.', 'ps3.t': '30 يومًا مجانًا',
+    'fm.h': 'تفضّل أن نجهّزه معك؟', 'fm.p': 'أخبرنا قليلًا عن مكتبك، وسنرد خلال يوم عمل واحد لتحديد موعد مكالمة مدتها 15 دقيقة.',
+    'self.btn': 'ابدأ الآن، الإعداد في 5 دقائق', 'self.p': 'دون مكالمة. 30 يومًا مجانًا. لديك حساب؟ <a href="https://app.raqeemhq.com/login">سجّل الدخول</a>',
     'fm.name': 'اسمك', 'fm.firm': 'اسم المكتب', 'fm.email': 'البريد الإلكتروني للعمل', 'fm.wa': 'رقم واتساب (اختياري)',
     'fm.clients': 'كم عدد العملاء الذين يرسلون لك مستندات؟', 'fm.c1': 'أقل من 50', 'fm.c2': 'من 50 إلى 150', 'fm.c3': 'من 150 إلى 300', 'fm.c4': 'أكثر من 300',
     'fm.plan': 'الخطة التي تهمّك', 'fm.p0': 'لم أقرر بعد', 'fm.msg': 'هل هناك ما يجب أن نعرفه؟ (اختياري)', 'fm.send': 'اطلب التجربة المجانية',
@@ -755,11 +763,11 @@
     'tr3.h': 'تُحذف عند طلبك', 'tr3.p': 'اطلب منا حذف بيانات أي عميل، أو جميعها، في أي وقت. تُحذف خلال 30 يومًا ونؤكد ذلك عبر البريد الإلكتروني.',
     'tr4.h': 'اتفاقية سرية', 'tr4.p': 'يسعدنا توقيع اتفاقية سرية قبل بدء تجربتك. اطّلع على <a href="/privacy.html?lang=ar">سياسة الخصوصية</a>.',
     'fo.h': 'كلمة من المؤسس',
-    'fo.q': '"أنشأت رقيم لأن فرق المحاسبة تخسر ساعات كل شهر في ملاحقة العملاء لإرسال المستندات عبر واتساب. خلال تجربتك ستتعامل معي مباشرة: أُعدّ رقمك، وأُدخل قائمة عملائك، وأتولى أي شيء تحتاجه."',
+    'fo.q': '"أنشأت رقيم لأن فرق المحاسبة تخسر ساعات كل شهر في ملاحقة العملاء لإرسال المستندات عبر واتساب. خلال تجربتك يمكنك التواصل معي مباشرة: أساعدك في ربط رقمك، وأُدخل قائمة عملائك، وأتولى أي شيء تحتاجه."',
     'fo.r': 'مؤسس رقيم',
     'faq.h': 'أسئلة تطرحها المكاتب علينا', 'faq.p': 'لديك سؤال آخر؟ راسلنا على <a href="mailto:raqeemhq@gmail.com" style="color:var(--green)">raqeemhq@gmail.com</a>.',
     'q1': 'هل يحتاج عملائي إلى تنزيل تطبيق؟', 'a1': 'لا. يستخدمون واتساب الموجود لديهم. لا روابط ولا تسجيل دخول ولا كلمات مرور. يكفي أن يردّوا في المحادثة.',
-    'q2': 'على أي رقم واتساب سيراسل عملائي؟', 'a2': 'رقم أعمال مخصص يظهر باسم مكتبك. يبقى رقم واتساب المعتاد لديك كما هو. نُعدّ الرقم الجديد لك خلال التجربة.',
+    'q2': 'على أي رقم واتساب سيراسل عملائي؟', 'a2': 'رقم أعمال مخصص يظهر باسم مكتبك. يبقى رقم واتساب المعتاد لديك كما هو. تربطه بنفسك خلال دقائق عند التسجيل، أو نقوم بذلك معك.',
     'q3': 'هل بيانات عملائنا آمنة؟', 'a3': 'تُستخدم الملفات فقط لجمعها والتحقق منها لصالح مكتبك، ولا تُباع ولا تُشارك، وتُحذف عند طلبك. ويمكننا توقيع اتفاقية سرية قبل البدء.',
     'q4': 'هل يقدّم رقيم استشارات ضريبية أو محاسبية؟', 'a4': 'لا. يجمع رقيم المستندات ويتحقق منها. تُحال أسئلة الضرائب أو مسك الدفاتر إلى فريقك، ويبقى محاسبوك أصحاب القرار في العمل.',
     'q5': 'ما اللغات التي يتحدث بها؟', 'a5': 'يرد باللغة التي يكتب بها كل عميل، ومنها العربية والإنجليزية والهندية والأردية.',
