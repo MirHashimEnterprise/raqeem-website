@@ -172,6 +172,19 @@
   .ck{padding:5px 10px;border-radius:999px;font-size:12.5px;font-weight:600;background:#F0F3F1;color:var(--muted)}
   .ck.d{background:var(--mint);color:var(--green-dark)} .ck.f{background:var(--amber-soft);color:var(--amber)}
   .pill{display:inline-block;padding:5px 11px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap}
+  .sumbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:10px}
+  .sumbox .sh{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-weight:700;font-size:14px}
+  .sumbox .sh small{font-size:11.5px;font-weight:600;color:var(--amber);background:var(--amber-soft);border-radius:999px;padding:3px 8px}
+  .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+  .sgrid div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#FBFCFB}
+  .sgrid span{display:block;color:var(--muted);font-size:12px;font-weight:600}
+  .sgrid b{display:block;font-size:18px;font-weight:800;margin-top:2px}
+  .sgrid .v{background:var(--mint);border-color:var(--mint)} .sgrid .v b{color:var(--green-dark)}
+  .vatlist{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  .vatlist div{border:1px solid var(--line);border-radius:18px;padding:20px;background:#fff}
+  .vatlist h3{font-size:18px;margin-bottom:6px}
+  .vatlist p{color:var(--muted);font-size:15px}
+  @media (max-width:760px){.sgrid{grid-template-columns:repeat(2,1fr)}.vatlist{grid-template-columns:1fr}}
   .pill.done{background:var(--mint);color:var(--green-dark)} .pill.wait{background:#EEF1F0;color:var(--text)} .pill.red{background:#FEF0EE;color:#B42318}
 
   /* Calculator */
@@ -459,19 +472,21 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="firms-title" data-i18n="firms.h">What your team opens each morning</h2>
-        <p data-i18n="firms.p">A live page that shows where every client stands, and flags the ones that need a person.</p>
+        <p data-i18n="firms.p">A live page that shows which clients are ready for VAT, what is still missing, and a draft summary of each client's month.</p>
       </div>
       <div class="dash" aria-label="Example dashboard with sample clients" role="img" data-i18n-aria="b.aria">
-        <div class="dash-top"><strong data-i18n="b.title">Client documents · September</strong><span class="live"><i></i><span data-i18n="b.live">Live</span></span></div>
+        <div class="dash-top"><strong data-i18n="b.title">Client documents · October</strong><span class="live"><i></i><span data-i18n="b.live">Live</span></span></div>
         <div class="kpis">
           <div class="kpi"><span data-i18n="b.k1">Clients</span><b class="num">148</b></div>
-          <div class="kpi g"><span data-i18n="b.k2">Documents received</span><b class="num">612</b></div>
+          <div class="kpi g"><span data-i18n="b.k2">Ready for VAT</span><b class="num">112</b></div>
           <div class="kpi a"><span data-i18n="b.k3">Need fixing</span><b class="num">9</b></div>
           <div class="kpi r"><span data-i18n="b.k4">Need a person</span><b class="num">2</b></div>
         </div>
         <div class="crow"><div class="who"><span class="av">DR</span><div><b>Desert Rose Trading</b><small data-i18n="b.t1">Active 12 min ago</small></div></div>
           <div class="cks"><span class="ck d" data-i18n="ck.bank">✓ Bank statement</span><span class="ck d" data-i18n="ck.sales">✓ Sales invoices</span><span class="ck d" data-i18n="ck.purch">✓ Purchase invoices</span><span class="ck d" data-i18n="ck.rec">✓ Receipts</span></div>
-          <span class="pill done" data-i18n="p.done">Complete</span></div>
+          <span class="pill done" data-i18n="p.done">Ready for VAT</span></div>
+        <div class="sumbox"><div class="sh"><span data-i18n="s.h">Desert Rose Trading · October summary</span><small data-i18n="s.draft">Draft, check before filing</small></div>
+          <div class="sgrid"><div><span data-i18n="s.rev">Revenue</span><b class="num">AED 78,500</b></div><div><span data-i18n="s.cost">Costs</span><b class="num">AED 19,150</b></div><div><span data-i18n="s.profit">Profit</span><b class="num">AED 59,350</b></div><div class="v"><span data-i18n="s.vat">VAT payable</span><b class="num">AED 2,968</b></div></div></div>
         <div class="crow"><div class="who"><span class="av">MB</span><div><b>Marina Bites Café</b><small data-i18n="b.t2">Active 1 h ago</small></div></div>
           <div class="cks"><span class="ck d" data-i18n="ck.bank">✓ Bank statement</span><span class="ck f" data-i18n="ck.salesf">! Sales invoices</span><span class="ck" data-i18n="ck.purchm">○ Purchase invoices</span><span class="ck" data-i18n="ck.recm">○ Receipts</span></div>
           <span class="pill red" data-i18n="p.red">Needs a person</span></div>
@@ -480,6 +495,11 @@
           <span class="pill wait" data-i18n="p.wait">Waiting on client</span></div>
       </div>
       <p class="sample" data-i18n="b.sample">Example view with sample client names.</p>
+      <div class="vatlist">
+        <div><h3 data-i18n="v1.h">VAT checklist for every client</h3><p data-i18n="v1.p">Bank statement, sales, purchases, receipts: see what's in and what's missing for any month or 3-month VAT period. Raqeem keeps reminding the client until it's complete.</p></div>
+        <div><h3 data-i18n="v2.h">Draft numbers, read for you</h3><p data-i18n="v2.p">Raqeem reads the amounts and VAT on every invoice and receipt and adds them up: revenue, costs, profit, output and input VAT. Your accountant checks it and files it.</p></div>
+        <div><h3 data-i18n="v3.h">Export in one click</h3><p data-i18n="v3.p">Download the VAT summary for all your clients as a spreadsheet, ready for your accounting software.</p></div>
+      </div>
     </div>
   </section>
 
@@ -727,13 +747,17 @@
     's1.n': 'الخطوة 1', 's1.h': 'يتلقى العملاء تذكيرًا ودودًا', 's1.p': 'في كل شهر، يتلقى كل عميل رسالة واتساب تحدد بدقة ما يحتاجه مكتبك، مع تذكيرات لطيفة إذا نسي.',
     's2.n': 'الخطوة 2', 's2.h': 'يردّون بالصور أو ملفات PDF', 's2.p': 'يقرأ رقيم كل ملف ويصنّفه، ويطلب من العميل إعادة إرسال أي ملف غير واضح أو مقطوع أو يخص فترة غير صحيحة.',
     's3.n': 'الخطوة 3', 's3.h': 'يرى فريقك صفحة واحدة واضحة', 's3.p': 'من أرسل كل شيء، ومن لم يرسل بعد، ومن يحتاج إلى تدخّل أحد الموظفين. لا مزيد من التنقل بين مئات المحادثات.',
-    'firms.h': 'ما يفتحه فريقك كل صباح', 'firms.p': 'صفحة مباشرة تُظهر وضع كل عميل، وتنبّه إلى من يحتاج إلى تدخّل أحد الموظفين.',
-    'b.aria': 'مثال للوحة المتابعة بأسماء عملاء افتراضية', 'b.title': 'مستندات العملاء · سبتمبر', 'b.live': 'مباشر',
-    'b.k1': 'العملاء', 'b.k2': 'المستندات المستلمة', 'b.k3': 'تحتاج تصحيحًا', 'b.k4': 'تحتاج موظفًا',
+    'firms.h': 'ما يفتحه فريقك كل صباح', 'firms.p': 'صفحة مباشرة تُظهر العملاء الجاهزين لضريبة القيمة المضافة، وما زال ناقصًا، وملخصًا أوليًا لشهر كل عميل.',
+    'b.aria': 'مثال للوحة المتابعة بأسماء عملاء افتراضية', 'b.title': 'مستندات العملاء · أكتوبر', 'b.live': 'مباشر',
+    'b.k1': 'العملاء', 'b.k2': 'جاهز للضريبة', 'b.k3': 'تحتاج تصحيحًا', 'b.k4': 'تحتاج موظفًا',
     'b.t1': 'نشط قبل 12 دقيقة', 'b.t2': 'نشط قبل ساعة', 'b.t3': 'نشط أمس',
     'ck.bank': '✓ كشف الحساب', 'ck.sales': '✓ فواتير المبيعات', 'ck.purch': '✓ فواتير المشتريات', 'ck.rec': '✓ الإيصالات',
     'ck.salesf': '! فواتير المبيعات', 'ck.purchm': '○ فواتير المشتريات', 'ck.recm': '○ الإيصالات', 'ck.salesm': '○ فواتير المبيعات',
-    'p.done': 'مكتمل', 'p.red': 'يحتاج موظفًا', 'p.wait': 'بانتظار العميل',
+    'p.done': 'جاهز للضريبة',
+    's.h': 'ديزرت روز للتجارة · ملخص أكتوبر', 's.draft': 'مسودة، يُرجى المراجعة قبل التقديم', 's.rev': 'الإيرادات', 's.cost': 'التكاليف', 's.profit': 'الربح', 's.vat': 'الضريبة المستحقة',
+    'v1.h': 'قائمة مستندات الضريبة لكل عميل', 'v1.p': 'كشف الحساب البنكي والمبيعات والمشتريات والإيصالات: اعرف ما وصل وما ينقص لأي شهر أو فترة ضريبية من 3 أشهر. ويستمر رقيم في تذكير العميل حتى تكتمل.',
+    'v2.h': 'أرقام أولية تُقرأ عنك', 'v2.p': 'يقرأ رقيم المبالغ والضريبة في كل فاتورة وإيصال ويجمعها: الإيرادات والتكاليف والربح وضريبة المخرجات والمدخلات. يراجعها المحاسب ثم يقدّمها.',
+    'v3.h': 'تصدير بنقرة واحدة', 'v3.p': 'نزّل ملخص الضريبة لجميع عملائك كجدول بيانات، جاهزًا لبرنامج المحاسبة لديك.', 'p.red': 'يحتاج موظفًا', 'p.wait': 'بانتظار العميل',
     'b.sample': 'عرض توضيحي بأسماء عملاء افتراضية.',
     'calc.h': 'كم يكلّف جمع المستندات مكتبك؟', 'calc.p': 'حرّك المؤشرات لتناسب مكتبك. احسب الوقت الذي يُقضى في ملاحقة العملاء، والوقت الذي يُقضى في مراجعة ما يرسلونه وتسميته وحفظه.',
     'calc.l1': 'عدد العملاء الذين يرسلون مستندات شهرية', 'calc.l2': 'دقائق ملاحقة كل عميل شهريًا (رسائل ومكالمات ومتابعات)', 'calc.l4': 'دقائق مراجعة مستندات كل عميل وتسميتها وحفظها', 'calc.l3': 'تكلفة الموظف في الساعة شاملة التأشيرة والمزايا (درهم)',
