@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raqeem for real estate: WhatsApp AI that answers leads and books viewings</title>
+<meta name="description" content="A WhatsApp AI assistant for Dubai and UAE real estate brokers. Replies to every lead in seconds, qualifies them, sends matching listings and books viewings, on your own WhatsApp number.">
+<meta name="theme-color" content="#1D4ED8">
+<meta property="og:title" content="Raqeem for real estate: every WhatsApp lead answered in seconds">
+<meta property="og:description" content="Replies 24/7 in the buyer's language, qualifies every lead and books viewings. Keep your own WhatsApp number.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0F2A22;--text:#2D4038;--muted:#5E6F68;--green:#0E7A5A;--blue:#1D4ED8;--blue-d:#1E40AF;--blue-soft:#E8EFFE;--blue-2:#D3E0FD;--line:#E1E8E4;--chat:#EFEAE2;--out:#D9FDD3;--amber:#A35F00;--amber-soft:#FFF3DF;--red:#B42318;--red-soft:#FEE4E2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:"Schibsted Grotesk",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .mark{width:34px;height:34px;border-radius:10px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+  .brand b{font-weight:800;font-size:22px;letter-spacing:-.5px}
+  .brand small{font-weight:600;font-size:13px;color:var(--blue);background:var(--blue-soft);border-radius:999px;padding:3px 10px}
+  .links{display:flex;align-items:center;gap:20px;font-weight:500;font-size:15px}
+  .links a{text-decoration:none;color:var(--text)} .links a:hover{color:var(--blue)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;font-size:16px;text-decoration:none;padding:13px 22px;border-radius:999px;border:2px solid var(--blue);background:var(--blue);color:#fff;cursor:pointer;transition:background .15s}
+  .btn:hover{background:var(--blue-d);border-color:var(--blue-d)}
+  .btn.line{background:transparent;color:var(--blue)} .btn.line:hover{background:var(--blue-soft)}
+  .btn.small{padding:9px 16px;font-size:15px}
+  .hero{background:linear-gradient(180deg,#fff 0%,var(--blue-soft) 100%);overflow:hidden}
+  .hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:56px 20px 80px}
+  .tagline{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--blue-2);color:var(--blue-d);font-weight:600;font-size:14.5px;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin-bottom:20px}
+  .hero p.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:30em;margin-bottom:28px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .facts{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;color:var(--text);font-size:15px}
+  .facts li::before{content:"✓ ";color:var(--blue);font-weight:800}
+  .phone{background:#111;border-radius:40px;padding:12px;max-width:380px;margin:0 auto;box-shadow:0 40px 70px -35px rgba(15,42,34,.55)}
+  .screen{background:var(--chat);border-radius:30px;overflow:hidden}
+  .wtop{background:#075E54;color:#fff;padding:14px 16px;display:flex;gap:10px;align-items:center}
+  .av{width:36px;height:36px;border-radius:50%;background:#fff;color:#075E54;display:grid;place-items:center;font-weight:800;font-size:14px}
+  .wtop small{display:block;opacity:.8;font-size:12px}
+  .thread{padding:14px 12px 18px;display:flex;flex-direction:column;gap:7px}
+  .b{max-width:84%;padding:8px 11px;border-radius:12px;font-size:14px;line-height:1.4;background:#fff;align-self:flex-start;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+  .b.me{background:var(--out);align-self:flex-end}
+  .pc{align-self:flex-start;background:#fff;border-radius:12px;overflow:hidden;width:76%;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+  .pc .im{height:64px;background:linear-gradient(135deg,#0E7A5A,#2bb37f);color:#fff;font-weight:700;font-size:12.5px;padding:9px 11px}
+  .pc .bd{padding:7px 11px 9px;font-size:13px} .pc .bd b{display:block}
+  .note{align-self:center;background:#FFF8E1;border-radius:8px;padding:5px 10px;font-size:12.5px}
+  section.block{padding:72px 0}
+  section.alt{background:#F7F9FF}
+  .head{text-align:center;max-width:42em;margin:0 auto 34px}
+  .head h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.025em;line-height:1.15;margin-bottom:10px}
+  .head p{color:var(--muted);font-size:17.5px}
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .feat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+  .feat .ic{width:40px;height:40px;border-radius:12px;background:var(--blue-soft);display:grid;place-items:center;font-size:20px;margin-bottom:12px}
+  .feat h3{font-size:18px;margin-bottom:4px} .feat p{color:var(--muted);font-size:15.5px}
+  .broker{max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 24px 50px -36px rgba(15,42,34,.45)}
+  .lh{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .lh .nm{font-weight:800;font-size:19px}
+  .pill{border-radius:999px;padding:4px 11px;font-size:12.5px;font-weight:700}
+  .hot{background:var(--red-soft);color:var(--red)} .grey{background:#EEF2F1;color:var(--muted)}
+  .sum{margin:10px 0 12px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .f{background:#FBFCFB;border:1px solid var(--line);border-radius:12px;padding:9px 11px}
+  .f span{display:block;font-size:12px;color:var(--muted);font-weight:600} .f b{font-size:15px}
+  .vb{margin-top:12px;background:#EAF6EF;border:1px solid #c7ead8;border-radius:14px;padding:12px 14px}
+  .ho{margin-top:10px;background:var(--amber-soft);border-radius:14px;padding:12px 14px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+  .step .n{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:12px}
+  .step h3{font-size:18px;margin-bottom:4px} .step p{color:var(--muted);font-size:15.5px}
+  .step .t{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--blue);background:var(--blue-soft);border-radius:999px;padding:3px 10px}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column}
+  .plan.pop{border:2px solid var(--blue);box-shadow:0 24px 50px -30px rgba(29,78,216,.45)}
+  .plan .tag{align-self:flex-start;font-size:12.5px;font-weight:700;color:#fff;background:var(--blue);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+  .plan h3{font-size:20px} .plan .for{color:var(--muted);font-size:15px;margin-bottom:14px}
+  .price{font-size:34px;font-weight:800;letter-spacing:-.02em} .price small{font-size:15px;color:var(--muted);font-weight:600}
+  .setup{color:var(--muted);font-size:14.5px;margin:2px 0 16px}
+  .plan ul{list-style:none;display:grid;gap:7px;margin-bottom:20px;font-size:15px;color:var(--text)}
+  .plan li::before{content:"✓ ";color:var(--blue);font-weight:800}
+  .plan .btn{margin-top:auto}
+  .founding{max-width:820px;margin:22px auto 0;background:var(--blue-soft);border:1px solid var(--blue-2);border-radius:16px;padding:14px 18px;text-align:center;font-size:15.5px}
+  .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:0 auto}
+  .rule{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+  .rule i{font-style:normal;font-size:20px} .rule b{display:block} .rule span{color:var(--muted);font-size:15px}
+  .faq{max-width:780px;margin:0 auto;display:grid;gap:10px}
+  details{border:1px solid var(--line);border-radius:16px;padding:16px 20px;background:#fff}
+  summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none} summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--blue);font-weight:800} details[open] summary::after{content:"–"}
+  details p{color:var(--muted);margin-top:8px}
+  form{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 24px 50px -36px rgba(15,42,34,.4)}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14.5px}
+  label.full{margin-top:14px}
+  input,select,textarea{font:inherit;font-weight:400;font-size:16px;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;outline:none;background:#fff}
+  input:focus,select:focus,textarea:focus{border-color:var(--blue)}
+  .hp{position:absolute;left:-9999px}
+  .ff{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px}
+  .fine{color:var(--muted);font-size:14px}
+  .fmsg{margin-top:12px;font-weight:600}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .foot nav{display:flex;gap:16px;flex-wrap:wrap} .foot nav a{text-decoration:none} .foot nav a:hover{color:var(--blue)}
+  @media (max-width:900px){.hgrid,.feats,.steps,.plans,.rules,.g2{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.links .hide-m{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Raqeem home"><span class="mark" aria-hidden="true">R</span><b>Raqeem</b><small>Real estate</small></a>
+    <nav class="links" aria-label="Main">
+      <a class="hide-m" href="#how">How it works</a>
+      <a class="hide-m" href="#pricing">Pricing</a>
+      <a class="hide-m" href="#faq">FAQ</a>
+      <a class="btn small" href="#start">Get started</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap hgrid">
+      <div>
+        <span class="tagline">For brokers and agencies in Dubai and the UAE</span>
+        <h1>Every WhatsApp lead answered in seconds.</h1>
+        <p class="lead">Raqeem replies to your leads 24/7 in their language, asks the right questions, sends matching properties from your listings and books viewings in your calendar. On your own WhatsApp number.</p>
+        <div class="cta">
+          <a class="btn" href="https://app.raqeemhq.com/demo/realestate">Try the live demo</a>
+          <a class="btn line" href="#start">Get started</a>
+        </div>
+        <ul class="facts"><li>Keep your WhatsApp number</li><li>English, Arabic and more</li><li>Live in 1 day</li></ul>
+      </div>
+      <div class="phone" role="img" aria-label="Example WhatsApp chat between a buyer and the AI assistant">
+        <div class="screen">
+          <div class="wtop"><div class="av">DK</div><div><b>Dunes &amp; Keys Realty</b><small>online · replies instantly</small></div></div>
+          <div class="thread">
+            <div class="b me">Hi, I saw your 2BR in Dubai Marina on Bayut. Still available?</div>
+            <div class="b">Hi! 👋 Yes, it's available: AED 2,450,000, furnished, full marina view. Are you buying to live in or as an investment?</div>
+            <div class="pc"><div class="im">Marina Gate 1, Dubai Marina</div><div class="bd"><b>2 BR Apartment · AED 2,450,000</b>1,250 sq ft · 📄 brochure.pdf</div></div>
+            <div class="b me">To live in. Cash, around 2.5M</div>
+            <div class="b">Perfect. I have Mon 5:30pm or Tue 11:30am for a viewing. Which suits you?</div>
+            <div class="b me">Monday works</div>
+            <div class="note">📅 Viewing booked · Mon, 17:30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block" aria-labelledby="what-title">
+    <div class="wrap">
+      <div class="head"><h2 id="what-title">Your best assistant, never asleep</h2><p>The buyer messages five agents. Whoever answers first usually gets the viewing. Now that's you, every time.</p></div>
+      <div class="feats">
+        <div class="feat"><div class="ic">⚡</div><h3>Replies in seconds</h3><p>Day or night, weekends and holidays. No more leads going cold while you're on a viewing.</p></div>
+        <div class="feat"><div class="ic">🌍</div><h3>Speaks their language</h3><p>English, Arabic, Hindi, Russian and more. It answers in whatever language the buyer writes in.</p></div>
+        <div class="feat"><div class="ic">🎯</div><h3>Qualifies every lead</h3><p>Buy or rent, budget, area, bedrooms, timeline, cash or mortgage. Asked naturally, one question at a time.</p></div>
+        <div class="feat"><div class="ic">🏠</div><h3>Sends matching listings</h3><p>Picks the right properties from your own listings, with details and brochures. Never invents prices.</p></div>
+        <div class="feat"><div class="ic">📅</div><h3>Books viewings</h3><p>Offers your free times, books the viewing and sends reminders so fewer people forget to show up.</p></div>
+        <div class="feat"><div class="ic">🔥</div><h3>Tells you who's hot</h3><p>Every lead is scored hot, warm or cold with a one-line summary, so you call the right people first.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" aria-labelledby="broker-title">
+    <div class="wrap">
+      <div class="head"><h2 id="broker-title">What you see</h2><p>Every conversation turns into a clear lead card on your dashboard.</p></div>
+      <div class="broker" role="img" aria-label="Example lead card on the broker dashboard">
+        <div class="lh"><span class="nm">Ahmed</span><span class="pill hot">🔥 Hot</span><span class="pill grey">English</span></div>
+        <div class="sum">Cash buyer, AED 2.5M, wants a 2BR in Dubai Marina to live in, viewing booked.</div>
+        <div class="grid">
+          <div class="f"><span>Looking to</span><b>Buy</b></div><div class="f"><span>Budget</span><b>AED 2,500,000</b></div><div class="f"><span>Area</span><b>Dubai Marina</b></div>
+          <div class="f"><span>Bedrooms</span><b>2</b></div><div class="f"><span>Timeline</span><b>Within 1 month</b></div><div class="f"><span>Payment</span><b>Cash</b></div>
+        </div>
+        <div class="vb"><b>📅 Viewing booked · Mon, 17:30</b><br>2BR Apartment · Marina Gate 1 · reminder set</div>
+        <div class="ho">👤 <b>Your turn:</b> wants to offer AED 2.3M (asking 2.45M)</div>
+      </div>
+      <p class="fine" style="text-align:center;margin-top:14px">Example with a sample buyer. Price talks, legal and mortgage questions always go to you.</p>
+    </div>
+  </section>
+
+  <section id="how" class="block" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="head"><h2 id="how-title">Live in one day</h2><p>We set it up with you on a short call. Nothing technical on your side.</p></div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Connect your WhatsApp</h3><p>Log in with Facebook and pick the number your leads already message. You keep using the WhatsApp Business app on your phone.</p><span class="t">5 minutes</span></div>
+        <div class="step"><div class="n">2</div><h3>Add your listings and hours</h3><p>Send us your listings as a spreadsheet and tell us when you do viewings. We load everything for you.</p><span class="t">15-minute call</span></div>
+        <div class="step"><div class="n">3</div><h3>The AI starts answering</h3><p>Every new lead gets a reply in seconds. You see each lead and booked viewing on your dashboard, and can take over any chat.</p><span class="t">Same day</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="block alt" aria-labelledby="price-title">
+    <div class="wrap">
+      <div class="head"><h2 id="price-title">Simple monthly pricing</h2><p>One extra deal pays for years of Raqeem. Cancel any time.</p></div>
+      <div class="plans">
+        <div class="plan"><h3>Solo</h3><p class="for">For one agent</p><div class="price">AED 799<small> / month</small></div><p class="setup">Setup AED 999, one time</p>
+          <ul><li>1 WhatsApp number</li><li>Up to 50 listings</li><li>Lead scoring and summaries</li><li>Viewing booking and reminders</li></ul>
+          <a class="btn line" href="#start" data-plan="Solo">Choose Solo</a></div>
+        <div class="plan pop"><span class="tag">Most popular</span><h3>Team</h3><p class="for">For up to 5 agents</p><div class="price">AED 1,499<small> / month</small></div><p class="setup">Setup AED 1,499, one time</p>
+          <ul><li>Everything in Solo</li><li>Up to 300 listings</li><li>Leads shared to the right agent</li><li>Weekly lead report</li></ul>
+          <a class="btn" href="#start" data-plan="Team">Choose Team</a></div>
+        <div class="plan"><h3>Agency</h3><p class="for">For up to 15 agents</p><div class="price">AED 2,999<small> / month</small></div><p class="setup">Setup AED 2,499, one time</p>
+          <ul><li>Everything in Team</li><li>Unlimited listings</li><li>Custom questions and rules</li><li>Priority support</li></ul>
+          <a class="btn line" href="#start" data-plan="Agency">Choose Agency</a></div>
+      </div>
+      <div class="founding"><b>Founding broker offer:</b> the first 3 brokers get free setup and pay nothing until the AI books their first viewing.</div>
+      <p class="fine" style="text-align:center;margin-top:10px">WhatsApp message fees from Meta are included for normal use.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="rules-title">
+    <div class="wrap">
+      <div class="head"><h2 id="rules-title">Built to protect your name</h2></div>
+      <div class="rules">
+        <div class="rule"><i>🏷️</i><div><b>Never makes things up</b><span>It only uses your listings and prices. If it doesn't know, it says you'll confirm.</span></div></div>
+        <div class="rule"><i>🤝</i><div><b>Hands over to you</b><span>Price talks, mortgage, legal or unhappy buyers go straight to you with a summary.</span></div></div>
+        <div class="rule"><i>🙋</i><div><b>Honest about being AI</b><span>If someone asks, it says it's your AI assistant and that you handle viewings and offers.</span></div></div>
+        <div class="rule"><i>🔒</i><div><b>Your leads stay yours</b><span>Your data is only used to run your assistant. Never sold, never shared.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="block alt" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head"><h2 id="faq-title">Questions</h2></div>
+      <div class="faq">
+        <details><summary>Do I need a new phone number?</summary><p>No. You connect the WhatsApp Business number you already use, and you can keep using the app on your phone. When you reply yourself, the AI steps back from that chat.</p></details>
+        <details><summary>What about leads from Bayut and Property Finder?</summary><p>Buyers who tap the WhatsApp button on your portal listings message your number, so the AI answers them like any other lead.</p></details>
+        <details><summary>How do my listings get in?</summary><p>Send us a spreadsheet or your listing links, and we load them during setup. Tell us when something sells or changes and we update it.</p></details>
+        <details><summary>Which languages does it speak?</summary><p>It replies in the language the buyer writes in, including English, Arabic, Hindi, Urdu, Russian and French.</p></details>
+        <details><summary>Will buyers know it's AI?</summary><p>It writes like a helpful assistant and says it's AI if asked. Viewings and offers are always handled by you.</p></details>
+        <details><summary>Can I cancel?</summary><p>Yes, any time. You keep your WhatsApp number and your leads.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="block" aria-labelledby="start-title">
+    <div class="wrap">
+      <div class="head"><h2 id="start-title">Get your assistant live</h2><p>Tell us about your brokerage. We'll reply within one working day to book a 15-minute setup call.</p></div>
+      <form id="reForm" novalidate>
+        <div class="g2">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Brokerage name<input name="brokerage" required autocomplete="organization"></label>
+          <label>Work email<input name="email" type="email" required autocomplete="email"></label>
+          <label>WhatsApp number (optional)<input name="whatsapp" type="tel" autocomplete="tel" placeholder="+971"></label>
+          <label>How many agents?<select name="agents"><option>Just me</option><option selected>2 to 5</option><option>6 to 15</option><option>More than 15</option></select></label>
+          <label>Plan<select name="plan" id="planSel"><option>Not sure yet</option><option>Solo</option><option>Team</option><option>Agency</option></select></label>
+        </div>
+        <label class="full">Anything we should know? (optional)<textarea name="message" rows="3" placeholder="For example: we get most leads from Property Finder, mostly rentals in JVC."></textarea></label>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="ff"><button class="btn" type="submit" id="reSubmit">Request setup call</button><p class="fine">Or email <a href="mailto:raqeemhq@gmail.com">raqeemhq@gmail.com</a></p></div>
+        <p class="fmsg" id="reMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>© 2026 Raqeem, a product of MirHashimEnterprise</p>
+    <nav aria-label="Footer">
+      <a href="/">All assistants</a>
+      <a href="/accounting">Accounting</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll("[data-plan]").forEach(a => a.addEventListener("click", () => { document.getElementById("planSel").value = a.dataset.plan; }));
+const form = document.getElementById("reForm"), msg = document.getElementById("reMsg"), btn = document.getElementById("reSubmit");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form).entries());
+  if (d._honey) return;
+  if (!d.name || !d.brokerage || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email || "")) { msg.textContent = "Please fill in your name, brokerage and a valid email."; msg.style.color = "#B42318"; return; }
+  btn.disabled = true; btn.textContent = "Sending…";
+  try {
+    const r = await fetch("https://formsubmit.co/ajax/raqeemhq@gmail.com", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ ...d, _subject: "Real estate setup request: " + d.brokerage, _template: "table" }) });
+    if (!r.ok) throw new Error();
+    form.reset(); msg.style.color = "#0E7A5A"; msg.textContent = "Thank you! We'll reply within one working day to book your setup call.";
+  } catch (err) { msg.style.color = "#B42318"; msg.textContent = "Something went wrong. Please email raqeemhq@gmail.com instead."; }
+  btn.disabled = false; btn.textContent = "Request setup call";
+});
+</script>
+</body>
+</html>
